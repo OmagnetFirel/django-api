@@ -11,6 +11,7 @@ router.register('matriculas', MatriculasViewSet)
 
 
 urlpatterns = [
+    path(r'^jet/', include('jet.urls', 'jet')), #django jet , deixa admin bonito
     path('admin/', admin.site.urls),
     path("", include(router.urls)),
     path("alunos/<int:pk>/matriculas", ListaMatriculasAlunos.as_view()),
